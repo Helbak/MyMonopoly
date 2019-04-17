@@ -12,6 +12,7 @@ public class Gamer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
+    private String color;
     private int cash;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "step_id")
@@ -22,10 +23,11 @@ public class Gamer {
     public Gamer() {
     }
 
-    public Gamer(String name, Step step, int cash) {
+    public Gamer(String name, String color, int cash, Step step) {
         this.name = name;
-        this.step = step;
+        this.color = color;
         this.cash = cash;
+        this.step = step;
     }
 
     public long getId() {
@@ -60,5 +62,19 @@ public class Gamer {
         this.cash = cash;
     }
 
+    public String getColor() {
+        return color;
+    }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public List<Property> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(List<Property> properties) {
+        this.properties = properties;
+    }
 }

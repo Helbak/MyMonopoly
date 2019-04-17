@@ -109,13 +109,13 @@ private boolean isHotel;
 
 
 
-//    public Gamer getGamer() {
-//        return gamer;
-//    }
-//
-//    public void setGamer(Gamer gamer) {
-//        this.gamer = gamer;
-//    }
+    public Gamer getGamer() {
+        return gamer;
+    }
+
+    public void setGamer(Gamer gamer) {
+        this.gamer = gamer;
+    }
 
     public String getCity() {
         return city;
