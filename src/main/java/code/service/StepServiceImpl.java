@@ -2,10 +2,13 @@ package code.service;
 
 import code.dao.StepRepository;
 import code.domain.Step;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class StepServiceImpl implements StepService{
     private StepRepository stepRepository;
 

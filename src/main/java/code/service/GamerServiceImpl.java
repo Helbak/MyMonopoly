@@ -12,8 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 public class GamerServiceImpl implements GamerService{
     private GamerRepository gamerRepository;
-
     private StepService stepService;
+
     @Override
     @Transactional
    public void addGamer (Gamer gamer){

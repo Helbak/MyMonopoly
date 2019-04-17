@@ -34,62 +34,62 @@ private boolean isHotel;
     public Property() {
     }
 
-//    public Property(Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rent3, int rent4, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
-//       this.card = card;
-//        this.gamer = gamer;
-//        this.city = city;
-//        this.cityId = cityId;
-//        this.numberStreetInCity = numberStreetInCity;
-//        this.street = street;
-//        this.price = price;
-//        this.rentEmpty = rentEmpty;
-//        this.rent1 = rent1;
-//        this.rent2 = rent2;
-//        this.rent3 = rent3;
-//        this.rent4 = rent4;
-//        this.rentHotel = rentHotel;
-//        this.priceHome = priceHome;
-//        this.priceHotel = priceHotel;
-//        this.numberOfHome = numberOfHome;
-//        this.isHotel = isHotel;
-//    }
-//
-//    public Property(Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rent3, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
-//        this.card = card;
-//        this.gamer = gamer;
-//        this.city = city;
-//        this.cityId = cityId;
-//        this.numberStreetInCity = numberStreetInCity;
-//        this.street = street;
-//        this.price = price;
-//        this.rentEmpty = rentEmpty;
-//        this.rent1 = rent1;
-//        this.rent2 = rent2;
-//        this.rent3 = rent3;
-//        this.rentHotel = rentHotel;
-//        this.priceHome = priceHome;
-//        this.priceHotel = priceHotel;
-//        this.numberOfHome = numberOfHome;
-//        this.isHotel = isHotel;
-//    }
-//
-//    public Property( Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
-//        this.card = card;
-//        this.gamer = gamer;
-//        this.city = city;
-//        this.cityId = cityId;
-//        this.numberStreetInCity = numberStreetInCity;
-//        this.street = street;
-//        this.price = price;
-//        this.rentEmpty = rentEmpty;
-//        this.rent1 = rent1;
-//        this.rent2 = rent2;
-//        this.rentHotel = rentHotel;
-//        this.priceHome = priceHome;
-//        this.priceHotel = priceHotel;
-//        this.numberOfHome = numberOfHome;
-//        this.isHotel = isHotel;
-//    }
+    public Property(Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rent3, int rent4, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
+       this.card = card;
+        this.gamer = gamer;
+        this.city = city;
+        this.cityId = cityId;
+        this.numberStreetInCity = numberStreetInCity;
+        this.street = street;
+        this.price = price;
+        this.rentEmpty = rentEmpty;
+        this.rent1 = rent1;
+        this.rent2 = rent2;
+        this.rent3 = rent3;
+        this.rent4 = rent4;
+        this.rentHotel = rentHotel;
+        this.priceHome = priceHome;
+        this.priceHotel = priceHotel;
+        this.numberOfHome = numberOfHome;
+        this.isHotel = isHotel;
+    }
+
+    public Property(Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rent3, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
+        this.card = card;
+        this.gamer = gamer;
+        this.city = city;
+        this.cityId = cityId;
+        this.numberStreetInCity = numberStreetInCity;
+        this.street = street;
+        this.price = price;
+        this.rentEmpty = rentEmpty;
+        this.rent1 = rent1;
+        this.rent2 = rent2;
+        this.rent3 = rent3;
+        this.rentHotel = rentHotel;
+        this.priceHome = priceHome;
+        this.priceHotel = priceHotel;
+        this.numberOfHome = numberOfHome;
+        this.isHotel = isHotel;
+    }
+
+    public Property( Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
+        this.card = card;
+        this.gamer = gamer;
+        this.city = city;
+        this.cityId = cityId;
+        this.numberStreetInCity = numberStreetInCity;
+        this.street = street;
+        this.price = price;
+        this.rentEmpty = rentEmpty;
+        this.rent1 = rent1;
+        this.rent2 = rent2;
+        this.rentHotel = rentHotel;
+        this.priceHome = priceHome;
+        this.priceHotel = priceHotel;
+        this.numberOfHome = numberOfHome;
+        this.isHotel = isHotel;
+    }
 
     public Card getCard() {
         return card;

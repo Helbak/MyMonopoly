@@ -9,6 +9,7 @@ public interface PropertyService {
     void addProperty (Property property);
     List<Property> findProperties();
     Property getPropertyById(Long id);
-
+    void setHotelTrue (Property property);
+    void setHotelFalse (Property property);
     void setGamer (Property property, Gamer gamer);
 }

@@ -38,4 +38,10 @@ public class PropertySeviceImpl implements PropertyService{
     public void setGamer (Property property, Gamer gamer){
         property.setGamer(gamer);
     }
+    public void setHotelTrue (Property property){
+        property.setHotel(true);
+    }
+    public void setHotelFalse (Property property){
+        property.setHotel(false);
+    }
 }
