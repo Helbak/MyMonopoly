@@ -3,6 +3,7 @@ package code.service;
 import code.dao.GamerRepository;
 import code.dao.StepRepository;
 import code.domain.Gamer;
+import code.domain.Step;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,18 +44,23 @@ public class GamerServiceImpl implements GamerService{
     @Override
     @Transactional
     public void minusCash (Gamer gamer,int minusCash){
-        int cash = gamer.getCash();
-        gamer.setCash(cash-minusCash);
+        int newCash = gamer.getCash()-minusCash;
+        Gamer newGamer = new Gamer(gamer.getName(), gamer.getColor(), newCash, gamer.getStep());
+        gamerRepository.delete(gamer);
+        gamerRepository.save(newGamer);
     }
     @Override
     @Transactional
     public void setStep (Gamer gamer, int goStep){
-       long oldStep = gamer.getStep().getId();
-       if(oldStep+goStep<=38){
-           gamer.setStep(stepService.getStepById(oldStep+goStep));
-       }
-        if(oldStep+goStep>38){
-            gamer.setStep(stepService.getStepById(oldStep+goStep-38));
-        }
+        int newPosition=40;
+        if (gamer.getStep().getPosition()+goStep>38){
+        newPosition = gamer.getStep().getPosition()+goStep - 38;}
+        if (gamer.getStep().getPosition()+goStep<=38){
+            newPosition = gamer.getStep().getPosition()+goStep;}
+        Step newStep = stepService.getStepByPosition(newPosition);
+       Gamer newGamer = new Gamer(gamer.getName(), gamer.getColor(), gamer.getCash(), newStep);
+        gamerRepository.delete(gamer);
+        gamerRepository.save(newGamer);
     }
+
 }

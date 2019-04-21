@@ -8,23 +8,23 @@ public class Property {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @OneToOne
-    @JoinColumn(name="Id_card")
-    private Card card;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "step_id")
+    private Step step;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gamer_id")
     private Gamer gamer;
-
     private String city;
     private int cityId;
     private int numberStreetInCity;
+    private int haveStreetInCity;
     private String street;
     private  int price;
     private  int rentEmpty;
     private int rent1;
     private int rent2;
     private  int rent3;
-    private int rent4;
+    private  int rent4;
     private  int rentHotel;
     private int priceHome;
     private int priceHotel;
@@ -34,12 +34,13 @@ private boolean isHotel;
     public Property() {
     }
 
-    public Property(Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rent3, int rent4, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
-       this.card = card;
+    public Property(Step step, Gamer gamer, String city, int cityId, int numberStreetInCity, int haveStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rent3, int rent4, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
+        this.step = step;
         this.gamer = gamer;
         this.city = city;
         this.cityId = cityId;
         this.numberStreetInCity = numberStreetInCity;
+        this.haveStreetInCity = haveStreetInCity;
         this.street = street;
         this.price = price;
         this.rentEmpty = rentEmpty;
@@ -54,51 +55,6 @@ private boolean isHotel;
         this.isHotel = isHotel;
     }
 
-    public Property(Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rent3, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
-        this.card = card;
-        this.gamer = gamer;
-        this.city = city;
-        this.cityId = cityId;
-        this.numberStreetInCity = numberStreetInCity;
-        this.street = street;
-        this.price = price;
-        this.rentEmpty = rentEmpty;
-        this.rent1 = rent1;
-        this.rent2 = rent2;
-        this.rent3 = rent3;
-        this.rentHotel = rentHotel;
-        this.priceHome = priceHome;
-        this.priceHotel = priceHotel;
-        this.numberOfHome = numberOfHome;
-        this.isHotel = isHotel;
-    }
-
-    public Property( Card card, Gamer gamer, String city, int cityId, int numberStreetInCity, String street, int price, int rentEmpty, int rent1, int rent2, int rentHotel, int priceHome, int priceHotel, int numberOfHome, boolean isHotel) {
-        this.card = card;
-        this.gamer = gamer;
-        this.city = city;
-        this.cityId = cityId;
-        this.numberStreetInCity = numberStreetInCity;
-        this.street = street;
-        this.price = price;
-        this.rentEmpty = rentEmpty;
-        this.rent1 = rent1;
-        this.rent2 = rent2;
-        this.rentHotel = rentHotel;
-        this.priceHome = priceHome;
-        this.priceHotel = priceHotel;
-        this.numberOfHome = numberOfHome;
-        this.isHotel = isHotel;
-    }
-
-    public Card getCard() {
-        return card;
-    }
-
-    public void setCard(Card card) {
-        this.card = card;
-    }
-
     public long getId() {
         return id;
     }
@@ -107,7 +63,13 @@ private boolean isHotel;
         this.id = id;
     }
 
+    public Step getStep() {
+        return step;
+    }
 
+    public void setStep(Step step) {
+        this.step = step;
+    }
 
     public Gamer getGamer() {
         return gamer;
@@ -189,14 +151,6 @@ private boolean isHotel;
         this.rent3 = rent3;
     }
 
-    public int getRent4() {
-        return rent4;
-    }
-
-    public void setRent4(int rent4) {
-        this.rent4 = rent4;
-    }
-
     public int getRentHotel() {
         return rentHotel;
     }
@@ -235,5 +189,21 @@ private boolean isHotel;
 
     public void setHotel(boolean hotel) {
         isHotel = hotel;
+    }
+
+    public int getHaveStreetInCity() {
+        return haveStreetInCity;
+    }
+
+    public void setHaveStreetInCity(int haveStreetInCity) {
+        this.haveStreetInCity = haveStreetInCity;
+    }
+
+    public int getRent4() {
+        return rent4;
+    }
+
+    public void setRent4(int rent4) {
+        this.rent4 = rent4;
     }
 }
